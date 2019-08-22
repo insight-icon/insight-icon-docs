@@ -1,5 +1,0 @@
-# Usage
-
-```
-sudo use stuff 
-```

@@ -1,18 +1,12 @@
-Welcome to insight-icon-docs's documentation!
-======================================
+Insight ICON Docs
+-----------------
+
+Table of Contents:
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :glob:
 
-   readme
+   overview
    installation
-   usage
-   contributing
-   authors
+   terraform-docs/terraform-resources.md
 
-Indices and tables
-==================
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

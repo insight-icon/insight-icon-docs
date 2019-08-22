@@ -1,5 +1,9 @@
+_old/
 .idea/
 account.tfvars
 .terragrunt-cache
 
-docs/_build/*
+docs/_build/doctrees
+docs/_build/html
+
+docs/terraform-docs/
