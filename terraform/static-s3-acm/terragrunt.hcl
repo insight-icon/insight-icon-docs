@@ -5,7 +5,7 @@ terraform {
     commands  = get_terraform_commands_that_need_vars()
 
     required_var_files = [
-        "account.tfvars"
+        "../account.tfvars"
       ]
   }
 }
