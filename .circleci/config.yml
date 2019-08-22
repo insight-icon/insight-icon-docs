@@ -59,13 +59,15 @@ jobs:
 #          arguments: '--dryrun'
 
 workflows:
-  jobs:
-    - meta
-    - docs-build
-    - docs-deploy:
-        requires:
-          - meta
-          - docs-build
-        filters:
-          branches:
-            only: master
+  version: 2
+  build_deploy:
+    jobs:
+      - meta
+      - docs-build
+      - docs-deploy:
+          requires:
+            - meta
+            - docs-build
+          filters:
+            branches:
+              only: master
