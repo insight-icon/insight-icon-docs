@@ -1,3 +1,5 @@
 .idea/
 account.tfvars
 .terragrunt-cache
+
+docs/_build/*
