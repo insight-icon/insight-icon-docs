@@ -1,5 +1,13 @@
 terraform {
   source = "./static-s3-acm"
+
+  extra_arguments "custom_vars" {
+    commands  = get_terraform_commands_that_need_vars()
+
+    required_var_files = [
+        "account.tfvars"
+      ]
+  }
 }
 
 remote_state {
@@ -16,6 +24,6 @@ remote_state {
 
 inputs = {
   region = "us-east-1"
-  root_domain_name = "insightdatascience.link"
+  root_domain_name = "insightdatascience.pub"
   subdomain = "docs"
 }

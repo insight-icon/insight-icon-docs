@@ -10,4 +10,3 @@ variable "subdomain" {
   default = "blog"
 }
 
-variable "" {}
