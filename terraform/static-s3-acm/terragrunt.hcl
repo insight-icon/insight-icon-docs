@@ -1,11 +1,11 @@
 terraform {
-  source = "./static-s3-acm"
+  source = "./module"
 
   extra_arguments "custom_vars" {
     commands  = get_terraform_commands_that_need_vars()
 
     required_var_files = [
-        "../account.tfvars"
+        "./account.tfvars"
       ]
   }
 }
@@ -16,7 +16,7 @@ remote_state {
   config = {
     encrypt        = true
     region         = "us-east-1"
-    key            = "docs/terraform.tfstate"
+    key            = "static-s3-acm/terraform.tfstate"
     bucket         = "terraform-states-${get_aws_account_id()}"
     dynamodb_table = "terraform-locks-${get_aws_account_id()}"
   }
