@@ -53,8 +53,8 @@ jobs:
           name: Disable jekyll builds
           command: touch docs/_build/html/.nojekyll
       - aws-s3/sync:
-          from: bucket
-          to: 's3://www.docs.insightdatascience.pub/'
+          from: docs
+          to: 's3://www.docs.insightdatascience.pub'
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400"
