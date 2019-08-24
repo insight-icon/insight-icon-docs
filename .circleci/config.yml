@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   aws-s3: circleci/aws-s3@1.0.11
+  aws-cli: circleci/aws-cli@0.1.13
 
 jobs:
   meta:
@@ -18,7 +19,7 @@ jobs:
           name: Fix perms?
           command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
       - run:
-          name: Downgrade npm 
+          name: Downgrade npm
           command: npm install -g npm@4
       - run:
           name: Install meta
@@ -52,6 +53,8 @@ jobs:
       - run:
           name: Disable jekyll builds
           command: touch docs/_build/html/.nojekyll
+      - aws-cli/configure:
+          aws-region: us-east-1
       - aws-s3/sync:
           from: bucket
           to: 's3://www.docs.insightdatascience.pub/'
