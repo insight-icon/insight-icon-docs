@@ -6,14 +6,15 @@ orbs:
 jobs:
   meta:
     docker:
-      - image: circleci/ruby:2.4.2-jessie-node
+      - image: circleci/node:4.8.2
     steps:
       - checkout
       - run:
           name: "Update Node.js and npm"
           command: |
-            curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
-            curl https://www.npmjs.com/install.sh | sudo bash
+          curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" \
+          | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node \
+          curl https://www.npmjs.com/install.sh | sudo bash
       - run:
           name: Install meta
           command: sudo -s && sudo npm install -g meta
@@ -23,7 +24,7 @@ jobs:
 
   docs-build:
     docker:
-      - image: python:3.7
+      - image: python:3.7.4-stretch
     steps:
       - checkout
       - run:
