@@ -2,7 +2,6 @@ version: 2.1
 
 orbs:
   aws-s3: circleci/aws-s3@1.0.11
-  aws-cli: circleci/aws-cli@0.1.13
 
 jobs:
   meta:
@@ -53,8 +52,6 @@ jobs:
       - run:
           name: Disable jekyll builds
           command: touch docs/_build/html/.nojekyll
-      - aws-cli/configure:
-          aws-region: AWS_DEFAULT_REGION
       - aws-s3/sync:
           from: bucket
           to: 's3://www.docs.insightdatascience.pub/'
@@ -62,6 +59,7 @@ jobs:
             --acl public-read \
             --cache-control "max-age=86400"
           overwrite: true
+          aws-region: AWS_DEFAULT_REGION
 
 workflows:
   version: 2
