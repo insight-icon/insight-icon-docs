@@ -26,6 +26,9 @@ jobs:
       - run:
           name: Meta clone sub repos
           command: meta git clone .
+      - run:
+          name: BREAK
+          command: break this stuff
 
   docs-build:
     docker:
