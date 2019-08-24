@@ -1,16 +1,5 @@
-## Markdown Header
+# Overview 
 
-Foo in **Markdown**, which means we can do **inline *italics* like this**
+This documentation is intended to supplement the existing [ICON documentation](https://www.icondev.io/docs) and focus 
+more in the realm of activities related to management, automation, and testing of public representative nodes. 
 
-#### Markdown Lower Header
-
-More second-level content.
-
-[A link](http://rtfd.org)
-
-You can even do:
-
-```bash
-
-Code blocks
-```

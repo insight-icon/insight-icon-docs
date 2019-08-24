@@ -5,8 +5,9 @@ Table of Contents:
 
 .. toctree::
    :glob:
+   :maxdepth: 2
 
    overview
    installation
-   terraform-docs/terraform-resources.md
+   terraform-docs/index.rst
 
