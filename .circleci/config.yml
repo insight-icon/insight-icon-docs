@@ -16,7 +16,9 @@ jobs:
             curl https://www.npmjs.com/install.sh | sudo bash
       - run:
           name: Install meta
-          command: sudo npm i -g meta
+          command: git config --global url."https://github.com/".insteadOf git@github.com && \
+            git config --global url."https://".insteadOf git:// && \
+            sudo npm install -g meta
       - run:
           name: Meta clone sub repos
           command: meta git clone
