@@ -53,7 +53,7 @@ jobs:
           name: Disable jekyll builds
           command: touch docs/_build/html/.nojekyll
       - aws-s3/sync:
-          from: docs
+          from: docs/_build
           to: 's3://www.docs.insightdatascience.pub'
           arguments: |
             --acl public-read \
