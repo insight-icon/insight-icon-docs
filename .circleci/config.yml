@@ -27,8 +27,9 @@ jobs:
           name: Meta clone sub repos
           command: meta git clone .
       - persist_to_workspace:
-          root: .
-          paths: docs/*
+          root: docs
+          paths:
+            - terraform-docs
 
   docs-build:
     docker:

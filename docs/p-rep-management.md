@@ -16,8 +16,6 @@ sudo pip3 install preptools
 - [Github](https://github.com/icon-project/preptools)
 - [Docs](https://www.icondev.io/docs/p-rep-tools-preptools-tutorial)
 
-
-
 ### Register Node 
 
 `preptools registerPRep [options]`

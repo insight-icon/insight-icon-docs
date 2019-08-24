@@ -10,4 +10,5 @@ Table of Contents:
    overview
    installation
    terraform-docs/index.rst
+   resources
 
