@@ -1,16 +1,55 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: debian:stretch
+version: 2.1
 
+orbs:
+  aws-s3: circleci/aws-s3@1.0.0
+
+jobs:
+  meta:
+    docker:
+      - image: circleci/ruby:2.4.2-jessie-node
     steps:
       - checkout
-
       - run:
-          name: Greeting
-          command: echo Hello, world.
-
+          name: "Update Node.js and npm"
+          command: |
+            curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
+            curl https://www.npmjs.com/install.sh | sudo bash
       - run:
-          name: Print the Current Time
-          command: date
+          name: Install meta
+          command: npm i -g meta
+      - run:
+          name: Meta clone sub repos
+          command: meta git clone
+
+  docs-build:
+    docker:
+      - image: python:3.7
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
+      - run:
+          name: Build docs
+          command: cd docs/ && make html
+      - persist_to_workspace:
+          root: docs/_build
+          paths: html
+
+  docs-deploy:
+    docker:
+      - image: 'circleci/python:2.7'
+    steps:
+      - checkout
+      - attach_workspace:
+          at: docs/_build
+      - run:
+          name: Disable jekyll builds
+          command: touch docs/_build/html/.nojekyll
+      - aws-s3/sync:
+          from: bucket
+          to: 's3://www.docs.insightdatascience.pub/'
+          arguments: |
+            --acl public-read \
+            --cache-control "max-age=86400"
+          overwrite: true
