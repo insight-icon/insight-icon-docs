@@ -9,14 +9,17 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-#      - run:
-#          name: "Update Node.js and npm"
-#          command: |
-#            curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
-#            curl https://www.npmjs.com/install.sh | sudo bash
-#      - run:
-#          name: Fix npm
-#          command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+      - run:
+          name: "Update Node.js and npm"
+          command: |
+            curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
+            curl https://www.npmjs.com/install.sh | sudo bash
+      - run:
+          name: Fix perms?
+          command: sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+      - run:
+          name: Downgrade npm 
+          command: npm install -g npm@4
       - run:
           name: Install meta
           command: sudo npm install -g meta
