@@ -16,7 +16,7 @@ jobs:
             curl https://www.npmjs.com/install.sh | sudo bash
       - run:
           name: Install meta
-          command: sudo -s && sudo npm install -g meta
+          command: sudo npm install -g meta
       - run:
           name: Meta clone sub repos
           command: meta git clone
