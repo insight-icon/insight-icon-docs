@@ -46,11 +46,11 @@ resource "aws_s3_bucket" "www" {
 }
 POLICY
 
-
   website {
-    index_document = "index.html"
-    error_document = "404.html"
+    redirect_all_requests_to = "https://${var.subdomain}.${var.root_domain_name}"
   }
+
+
 }
 
 //                                                    Cert
@@ -182,7 +182,8 @@ POLICY
 
 
   website {
-    redirect_all_requests_to = "https://${var.subdomain}.${var.root_domain_name}"
+    index_document = "index.html"
+    error_document = "404.html"
   }
 }
 
