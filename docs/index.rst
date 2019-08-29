@@ -9,6 +9,9 @@ Table of Contents:
 
    overview
    installation
-   terraform-docs/index.rst
+   p-rep-management
    resources
+
+
+   terraform-docs/index.rst
 
