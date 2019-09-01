@@ -29,7 +29,9 @@ jobs:
       - persist_to_workspace:
           root: docs
           paths:
-            - terraform-docs
+#            - terraform-docs
+            - infrastructure
+            - security
 
   docs-build:
     docker:

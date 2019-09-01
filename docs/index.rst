@@ -12,6 +12,5 @@ Table of Contents:
    p-rep-management
    resources
 
-
-   terraform-docs/index.rst
-
+   infrastructure/index-infrastructure.rst
+   security/index-security.rst

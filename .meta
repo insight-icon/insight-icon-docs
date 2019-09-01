@@ -1,5 +1,6 @@
 {
   "projects": {
-    "docs/terraform-docs": "https://github.com/robc-io/terraform-docs"
+    "docs/infrastructure/terraform-docs": "https://github.com/robc-io/terraform-docs",
+    "docs/security/hardware/YubiKey-Guide": "https://github.com/robc-io/YubiKey-Guide"
   }
 }
