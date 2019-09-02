@@ -1,16 +1,19 @@
-ICON Docs
----------
-
-A consolidated view of multiple pieces of documentation provided by the ICON Foundation.  Does not include `ICON's official docs`_
-
-.. _ICON official docs: https://github.com/icon-project/documentation
+icon-service Docs
+-----------------
 
 Table of Contents:
 
 .. toctree::
    :titlesonly:
-   :caption: Table of Contents
+   :maxdepth: 0
+   :caption: User Documentation
 
-
-
-
+   icon-service/README
+   icon-service/docs/db
+   icon-service/docs/event-log-and-bloom-filter
+   icon-service/docs/improve-get-transaction-result
+   icon-service/docs/rabbitmq_integrate_tutorial
+   icon-service/docs/api-references/index
+   icon-service/docs/class
+   icon-service/docs/CHANGELOG
+   CHANGELOG-en <icon-service/docs/CHANGELOG-en>

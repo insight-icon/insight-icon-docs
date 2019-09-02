@@ -1,10 +1,8 @@
-Infrastructure Docs
--------------------
+Insight ICON Project Seeds
+--------------------------
 
 Table of Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   infrastructure-overview
-   terraform-docs/index.rst

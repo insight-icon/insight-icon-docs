@@ -1,3 +1,4 @@
 sphinx>=1.7.6
 recommonmark==0.6.0
 sphinx-rtd-theme==0.2.0
+msgpack==0.6.1

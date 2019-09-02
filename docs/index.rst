@@ -10,7 +10,9 @@ Table of Contents:
    overview
    installation
    p-rep-management
-   resources
-
+   insight-icon-project-seeds/index-insight-icon-project-seeds
    infrastructure/index-infrastructure.rst
    security/index-security.rst
+..   icon/index-icon
+
+   resources
