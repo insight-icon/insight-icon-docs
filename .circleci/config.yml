@@ -62,10 +62,10 @@ jobs:
           command: touch docs/_build/html/.nojekyll
       - aws-s3/sync:
           from: docs/_build/html
-          to: 's3://docs.insightdatascience.pub'
-          arguments: |
-            --acl public-read \
-            --cache-control "max-age=86400"
+          to: 's3://docs.insight-icon.net'
+#          arguments: |
+#            --acl public-read \
+#            --cache-control "max-age=86400"
           overwrite: true
           aws-region: AWS_DEFAULT_REGION
       - run:
