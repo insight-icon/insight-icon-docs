@@ -32,6 +32,7 @@ jobs:
 #            - terraform-docs
             - infrastructure
             - security
+            - insight-icon-project-seeds
 
   docs-build:
     docker:
