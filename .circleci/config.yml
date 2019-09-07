@@ -71,7 +71,7 @@ jobs:
           aws-region: AWS_DEFAULT_REGION
       - run:
           name: Invalidate prior cloudfront distribution
-          command: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths /*
+          command: aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
 
 workflows:
   version: 2
