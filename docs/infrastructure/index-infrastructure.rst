@@ -6,5 +6,5 @@ Table of Contents:
 .. toctree::
    :maxdepth: 2
 
-   infrastructure-overview
+   icon-p-rep-infra-specs/index-infra-specs.rst
    terraform-docs/index.rst

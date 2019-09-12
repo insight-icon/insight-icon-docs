@@ -7,11 +7,12 @@ Table of Contents:
    :glob:
    :maxdepth: 2
 
-   insight-icon-project-seeds/index-project-seeds
+
    overview
+   infrastructure/index-infrastructure.rst
+   teams/index-teams.rst
    installation
    p-rep-management
-   infrastructure/index-infrastructure.rst
    security/index-security.rst
 ..   icon/index-icon
 
