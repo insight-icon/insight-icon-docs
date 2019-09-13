@@ -31,6 +31,7 @@ jobs:
           paths:
 #            - terraform-docs
             - infrastructure
+            - teams
             - security
             - insight-icon-project-seeds
 
