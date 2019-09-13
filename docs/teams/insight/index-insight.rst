@@ -8,4 +8,4 @@ Table of Contents:
    :glob:
    :maxdepth: 2
 
-   insight-icon-project-seeds/index-project-seeds
+   insight-icon-project-seeds/index-project-seeds.rst
