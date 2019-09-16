@@ -1,5 +1,5 @@
-P-Rep Team Docs
----------------
+Teams
+-----
 
 Table of Contents:
 
@@ -7,4 +7,5 @@ Table of Contents:
    :glob:
    :maxdepth: 2
 
+   teams-overview
    insight/index-insight.rst

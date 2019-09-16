@@ -4,6 +4,7 @@
     "docs/security/hardware/YubiKey-Guide": "https://github.com/robc-io/YubiKey-Guide",
     "docs/icon/icon-service": "https://github.com/icon-project/icon-service",
     "docs/teams/insight/insight-icon-project-seeds": "https://github.com/robc-io/insight-icon-project-seeds",
-    "docs/infrastructure/icon-p-rep-infra-specs": "https://github.com/robc-io/icon-p-rep-infra-specs"
+    "docs/infrastructure/icon-p-rep-infra-specs": "https://github.com/robc-io/icon-p-rep-infra-specs",
+    "docs/teams/insight/insight-repos-docs/terragrunt-icon-insight-p-rep": "https://github.com/robc-io/terragrunt-icon-insight-p-rep"
   }
 }

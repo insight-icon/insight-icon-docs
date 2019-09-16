@@ -14,6 +14,17 @@ in the parent index for your docs to show up in the tree.
 
 The docs are then built and deployed on a timer.  Currently it is nightly but will tighten build times soon. 
 
-For now, given the state of the network, we will be focusing
-these docs on infrastructure related stuff.  Once best practices have been formed, the architecture blueprint will 
-then be used to form a basic DApp development reference architecture.  
+For now, given the state of the network, we will be focusing these docs on infrastructure related stuff.  
+Once best practices have been formed, the architecture blueprint will then be used to form a basic DApp development 
+reference architecture.  
+
+
+### To Build Locally 
+
+```bash
+pip install -r requirements.txt
+cd docs 
+make html 
+cd _build 
+python3 -m http.server 8008
+```
